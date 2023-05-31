@@ -32,7 +32,10 @@ a {
   text-align: center;
   color: #ffffff;
 }
-
+button {
+  all: unset;
+  cursor: pointer;
+}
 /*Header*/
 .header {
   background: #fffcf4;
@@ -234,4 +237,53 @@ a {
 }
 .hero .stat strong:nth-of-type(2) {
   margin-left: 14px;
+}
+
+/* Popular */
+.popular {
+  padding: 200px 0;
+}
+.popular-top {
+  display: flex;
+}
+
+.popular-top .popular-top-left {
+  width: 39%;
+}
+
+.popular-top .title {
+  font-family: "Sen", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.8rem;
+  line-height: 1.26;
+  letter-spacing: -0.02em;
+  color: #171100;
+}
+
+.popular-top .sub-title {
+  margin-top: 16px;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #5f5b53;
+}
+
+.popular-top .popular-top-right {
+  display: flex;
+  margin-left: auto;
+}
+.popular-top-right .circle {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ffb900;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.popular-top-right .right-arrow {
+  background: #ffb900;
+  margin-left: 18px;
 }
