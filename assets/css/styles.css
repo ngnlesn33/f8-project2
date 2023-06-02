@@ -402,3 +402,73 @@ a {
 .course-items .book-btn:hover {
   background: var(--primary-color);
 }
+
+/*Feedback*/
+.feedback {
+  background: #2e2100;
+}
+.body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feedback .person {
+  padding: 96px 0;
+}
+
+.feedback .avatar {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.feedback .person .name {
+  font-family: var(--font-heading);
+  margin-top: 18px;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.42;
+  color: #f7f7f7;
+}
+
+.feedback .person .studying {
+  margin-top: 4px;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: #bfbcb3;
+}
+.feedback .person .dots {
+  display: flex;
+  margin-top: 28px;
+}
+.feedback .person .dot {
+  width: 6px;
+  height: 6px;
+  background: #634700;
+  border-radius: 50%;
+}
+
+.feedback .person .dot + .dot {
+  margin-left: 6px;
+}
+
+.feedback .person .dot:nth-child(2) {
+  background: #ffb900;
+}
+.feedback .quote {
+  width: 64%;
+  position: relative;
+}
+.feedback .open-quote {
+  position: absolute;
+  top: -26px;
+  left: -30px;
+}
+.feedback blockquote {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2.6rem;
+  line-height: 1.54;
+  color: #ffffff;
+}
