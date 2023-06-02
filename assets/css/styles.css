@@ -1,7 +1,10 @@
 * {
   box-sizing: border-box;
 }
-
+:root {
+  --primary-color: #ffb900;
+  --font-heading: "Sen", sans-serif;
+}
 html {
   font-size: 62.5%;
 }
@@ -31,10 +34,26 @@ a {
   font-size: 1.6rem;
   text-align: center;
   color: #ffffff;
+  background: #171100;
+  border-radius: 999px;
 }
-button {
-  all: unset;
+
+.btn:hover {
+  opacity: 0.9;
   cursor: pointer;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp.line-2 {
+  --line-clamp: 2;
+}
+.break-all {
+  word-break: break-all;
 }
 /*Header*/
 .header {
@@ -85,7 +104,6 @@ button {
 }
 .header .sign-up-btn {
   min-width: 144px;
-  background: #171100;
   border-radius: 24.5px;
 }
 
@@ -168,7 +186,7 @@ button {
   padding: 64px 0 0 130px;
 }
 .hero-text .title {
-  font-family: "Sen", sans-serif;
+  font-family: var(--font-heading);
   font-weight: 700;
   font-size: 5.8rem;
   line-height: 1.17;
@@ -194,7 +212,7 @@ button {
 .hero .see-courses-btn {
   min-width: 180px;
   line-height: 64px;
-  background: #ffb900;
+  background: var(--primary-color);
   border-radius: 32px;
 }
 
@@ -229,7 +247,7 @@ button {
 .hero .stat strong {
   margin-top: 8px;
   padding-right: 8px;
-  font-family: "Sen", sans-serif;
+  font-family: var(--font-heading);
   font-weight: 700;
   font-size: 4.4rem;
   line-height: 1.23;
@@ -245,6 +263,7 @@ button {
 }
 .popular-top {
   display: flex;
+  align-items: center;
 }
 
 .popular-top .popular-top-left {
@@ -252,7 +271,7 @@ button {
 }
 
 .popular-top .title {
-  font-family: "Sen", sans-serif;
+  font-family: var(--font-heading);
   font-style: normal;
   font-weight: 700;
   font-size: 3.8rem;
@@ -271,19 +290,115 @@ button {
 .popular-top .popular-top-right {
   display: flex;
   margin-left: auto;
+  gap: 18px;
 }
-.popular-top-right .circle {
+.popular-top-right .arrow-btn {
   display: flex;
   width: 40px;
   height: 40px;
-  border: 1px solid #ffb900;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
   border-radius: 50%;
   justify-content: center;
   align-items: center;
+  transition-duration: 0.2s;
+  background: transparent;
+}
+
+.popular-top-right .arrow-btn:hover {
+  background: var(--primary-color);
+  color: #ffffff;
   cursor: pointer;
 }
 
-.popular-top-right .right-arrow {
-  background: #ffb900;
-  margin-left: 18px;
+.popular-bottom {
+  margin-top: 55px;
+  display: flex;
+  gap: 30px;
+}
+
+.popular-bottom .course-items {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #e2dfda;
+  border-radius: 12px;
+}
+
+.popular-bottom .course-items:hover {
+  border-color: transparent;
+  box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
+}
+
+.popular-bottom .course-img {
+  margin: -1px;
+  width: calc(100% + 1.5px);
+  height: 278px;
+  border-radius: 12px 12px 0px 0px;
+  object-fit: cover;
+}
+
+.course-items .info {
+  padding: 16px 22px 22px 22px;
+}
+
+.course-items .foot,
+.course-items .rating,
+.course-items .head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.course-items .head .title a {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #171100;
+  padding-right: 6px;
+}
+
+.course-items .head .star {
+  margin-right: 6px;
+}
+
+.course-items .head .value {
+  font-size: 1.6rem;
+  line-height: 1.75;
+  color: #fea31b;
+}
+
+.course-items .sub-title {
+  margin-top: 6px;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  color: #5f5b53;
+}
+
+.course-items .foot {
+  margin-top: 12px;
+}
+
+.course-items .price {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  color: #171100;
+}
+
+.course-items .book-btn {
+  border: none;
+  border-radius: 25px;
+  transition-duration: 0.2s;
+}
+
+.course-items .book-now {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 1.86;
+  text-align: center;
+  color: #ffffff;
+}
+
+.course-items .book-btn:hover {
+  background: var(--primary-color);
 }
